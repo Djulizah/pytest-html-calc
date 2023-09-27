@@ -82,3 +82,39 @@ def test_subtract_nol(input_data):
     x,y = input_data
     result = add(x,y)
     assert result == 0
+
+@pytest.mark.kalibagi
+def test_multiply_positif(input_data):
+    x,y = input_data
+    result = multiply(x,y)
+    assert result > 0
+
+@pytest.mark.kalibagi
+def test_multiply_negatif(input_data):
+    x,y = input_data
+    result = multiply(x,y)
+    assert result < 0
+
+@pytest.mark.kalibagi
+def test_multiply_nol(input_data):
+    x,y = input_data
+    result = multiply(x,y)
+    assert result == 0
+
+@pytest.mark.kalibagi
+def test_div_positif(input_data):
+    x,y = input_data
+    result = div(x,y)
+    assert result > 0
+
+@pytest.mark.kalibagi
+def test_div_negatif(input_data):
+    x,y = input_data
+    result = div(x,y)
+    assert result < 0
+
+@pytest.mark.kalibagi
+def test_div_nol(input_data):
+    x,y = input_data
+    result = div(x,y)
+    assert result == 0

@@ -26,10 +26,42 @@ Anda pelajari dari hasilnya
 def input_data(request):
     return request.param
 
-@pytest.mark.ujitambah
-def test_add(input_data):
+@pytest.mark.tambahkurang
+def test_add_positif(input_data):
     x,y = input_data
     result = add(x,y)
     assert result > 0
+
+
+@pytest.mark.tambahkurang
+def test_add_negatif(input_data):
+    x,y = input_data
+    result = add(x,y)
+    assert result < 0
+
+@pytest.mark.tambahkurang
+def test_add_nol(input_data):
+    x,y = input_data
+    result = add(x,y)
+    assert result == 0
+
+@pytest.mark.tambahkurang
+def test_subtract_positif(input_data):
+    x,y = input_data
+    result = subtract(x,y)
+    assert result > 0
+
+
+@pytest.mark.tambahkurang
+def test_subtract_negatif(input_data):
+    x,y = input_data
+    result = subtract(x,y)
+    assert result < 0
+
+@pytest.mark.tambahkurang
+def test_subtract_nol(input_data):
+    x,y = input_data
+    result = add(x,y)
+    assert result == 0
 
 
